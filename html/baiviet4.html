@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/baiviet.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <main class="post-detail-page">
+    
+    <header class="post-header">
+        <h1>Wi-Fi 2 băng tần là gì? Ưu nhược điểm và cách chọn router</h1>
+        <div class="post-meta">
+            <span>bởi: NetStore</span> | <span>10 Tháng 02, 2026</span> | <span>0 Bình luận</span>
+        </div>
+    </header>
+
+    <article class="post-content">
+        <p>Wifi 2 băng tần là công nghệ mạng không dây phát sóng đồng thời trên hai dải tần 2.4GHz và 5GHz, giúp tối ưu tốc độ và độ phủ sóng, giảm nghẽn mạng khi có nhiều thiết bị kết nối cùng lúc.</p>
+
+        <img src="../img/anhbaiviet4.jpg">
+
+        <h2>1. Phân biệt Wi-Fi 2 băng tần và 1 băng tần</h2>
+        <table border="1" cellpadding="12" cellspacing="0" style="width: 100%; border-collapse: collapse; margin: 20px 0; border-color: #ddd;">
+            <tr style="background-color: #0d3b66; color: white; text-align: left;">
+                <th>Tiêu chí</th>
+                <th>Wi-Fi 1 băng tần (Chỉ 2.4GHz)</th>
+                <th>Wi-Fi 2 băng tần (2.4GHz & 5GHz)</th>
+            </tr>
+            <tr>
+                <td><strong>Tốc độ</strong></td>
+                <td>Cơ bản, dễ giật lag khi đông thiết bị</td>
+                <td>Nhanh, mượt mà (nhờ có thêm sóng 5GHz)</td>
+            </tr>
+            <tr style="background-color: #f8fbff;">
+                <td><strong>Độ phủ sóng</strong></td>
+                <td>Rộng, xuyên tường tốt</td>
+                <td>Linh hoạt (Sóng xa 2.4GHz + Sóng mạnh 5GHz)</td>
+            </tr>
+            <tr>
+                <td><strong>Trải nghiệm</strong></td>
+                <td>Lướt web, đọc báo cơ bản</td>
+                <td>Chơi game online, xem phim 4K mượt mà</td>
+            </tr>
+        </table>
+
+        <h2>2. Ưu và nhược điểm</h2>
+        <p><strong>Ưu điểm:</strong></p>
+        <ul>
+            <li>Giảm nhiễu sóng và loại bỏ hiện tượng quá tải mạng.</li>
+            <li>Tốc độ truyền tải dữ liệu cực nhanh trên dải tần 5GHz.</li>
+            <li>Router tự động phân bổ thiết bị vào băng tần phù hợp để tối ưu trải nghiệm.</li>
+        </ul>
+        <p><strong>Nhược điểm:</strong></p>
+        <ul>
+            <li>Sóng 5GHz có phạm vi ngắn, khả năng xuyên tường kém hơn 2.4GHz.</li>
+            <li>Chi phí mua cục phát router thường cao hơn loại 1 băng tần.</li>
+        </ul>
+        <h2>3. Mẹo chọn mua và sử dụng tối ưu</h2>
+        <ul>
+            <li><strong>Chọn mua:</strong> Nên ưu tiên các bộ router có chuẩn Wi-Fi 5 hoặc Wi-Fi 6 đời mới. Hãy chú ý diện tích nhà để chọn loại có số lượng anten phát sóng phù hợp.</li>
+            <li><strong>Vị trí đặt:</strong> Đặt cục phát ở trung tâm nhà, vị trí trên cao, thoáng đãng. Tránh đặt gần các vật cản kim loại, góc khuất hoặc lò vi sóng.</li>
+            <li><strong>Cách kết nối:</strong> Điện thoại hay tivi ở gần cục phát thì kết nối vào sóng 5GHz để lấy tốc độ tối đa. Các thiết bị ở xa hoặc phòng bị ngăn nhiều tường thì dùng sóng 2.4GHz cho ổn định.</li>
+        </ul>
+
+        <p><strong>Kết luận:</strong> Nếu không gian của bạn có nhiều thiết bị thông minh (điện thoại, máy tính, smarthome...) thì việc nâng cấp lên router Wi-Fi 2 băng tần là một khoản đầu tư vô cùng xứng đáng để dứt điểm tình trạng mạng quay vòng vòng!</p>
+    </article>
+</main>
+    <div id="footer"></div>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => {
+                    if (!res.ok) throw new Error("Lỗi load: " + file);
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+</html>

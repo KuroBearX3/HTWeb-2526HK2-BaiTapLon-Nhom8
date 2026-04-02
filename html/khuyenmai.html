@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Khuyến mãi</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/khuyenmai.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="breadcrumb" style="margin-top: 20px; margin-bottom: 20px; font-size: 14px; color: #666;">
+            <strong>Trang chủ</strong> » Khuyến mãi
+        </div>
+
+        <main class="promo-container container">
+            <section class="promo-header">
+                <div class="main-banner">
+                    <a href="#sale-products">
+                        <img src="../img/sale1.png" alt="">
+                    </a>
+                </div>
+
+                <div class="extra-banners">
+                    <div class="extra-item">
+                        <img src="../img/sale2.png" alt="Extra 1">
+                    </div>
+                    <div class="extra-item">
+                        <img src="../img/sale3.png" alt="Extra 2">
+                    </div>
+                </div>
+            </section>
+
+            <section class="promo-content" id="sale-products">
+                <h2 class="title-divider">🔥 KHUYẾN MÃI TRONG NGÀY</h2>
+                <div class="countdown-container">
+            <span class="countdown-label">Kết thúc sau:</span>
+             <div class="countdown-timer">
+                <div class="time-box"><span id="hours">00</span><label>Giờ</label></div>
+                 <div class="time-divider">:</div>
+                <div class="time-box"><span id="minutes">00</span><label>Phút</label></div>
+                 <div class="time-divider">:</div>
+                 <div class="time-box"><span id="seconds">00</span><label>Giây</label></div>
+    </div>
+                <div class="product-grid">
+                    <!--Sản phẩm khuyến mãi 1-->
+                    <div class="product-card sale-card">
+                        <div class="badge-sale">-15%</div>
+                        <div class="product-image">
+                            <img src="../img/salep1.png" alt="Router">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Router Wifi Chuẩn N Mercusys MW302R</h3>
+                            <div class="price-box">
+                                <span class="old-price">285.000đ</span>
+                                <span class="product-price">200.000đ</span>
+                            </div>
+                            <button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
+                        </div>
+                    </div>
+
+                    <!--Sản phẩm khuyến mãi 2-->
+                    <div class="product-card sale-card">
+                        <div class="badge-sale">-40%</div>
+                        <div class="product-image">
+                            <img src="../img/salep2.png" alt="Repeater">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Repeater Wifi 300Mbps Totolink EX200 Trắng</h3>
+                            <div class="price-box">
+                                <span class="old-price">345.000đ</span>
+                                <span class="product-price">205.000đ</span>
+                            </div>
+                            <button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
+                        </div>
+                    </div>
+
+                    <!--Sản phẩm khuyến mãi 3-->
+                    <div class="product-card sale-card">
+                        <div class="badge-sale">-17%</div>
+                        <div class="product-image">
+                            <img src="../img/salep3.png" alt="Switch">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Thiết bị chuyển mạch Switch Mercusys 8 cổng MS108G</h3>
+                            <div class="price-box">
+                                <span class="old-price">350.000đ</span>
+                                <span class="product-price">290.000đ</span>
+                            </div>
+                            <button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
+                        </div>
+                    </div>
+
+                    <!--Sản phẩm khuyến mãi 4-->
+                    <div class="product-card sale-card">
+                        <div class="badge-sale">-48%</div>
+                        <div class="product-image">
+                            <img src="../img/salep4.png" alt="USB Wifi">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">USB Wifi AC1200 Asus AC53 Nano</h3>
+                            <div class="price-box">
+                                <span class="old-price">580.000đ</span>
+                                <span class="product-price">300.000đ</span>
+                            </div>
+                            <button class="btn-add-cart">THÊM VÀO GIỎ HÀNG</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+    <div id="footer"></div>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => {
+                    if (!res.ok) throw new Error("Lỗi load: " + file);
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+      
+        let duration = 60 * 60; 
+
+
+        let countDownDate = new Date().getTime() + (duration * 1000);
+
+        let x = setInterval(function() {
+        let now = new Date().getTime();
+        let distance = countDownDate - now;
+
+   
+         let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+   
+         document.getElementById("hours").innerHTML = String(hours).padStart(2, '0');
+         document.getElementById("minutes").innerHTML = String(minutes).padStart(2, '0');
+         document.getElementById("seconds").innerHTML = String(seconds).padStart(2, '0');
+
+    
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("hours").innerHTML = "00";
+        document.getElementById("minutes").innerHTML = "00";
+        document.getElementById("seconds").innerHTML = "00";
+        alert("Hết thời gian khuyến mãi rồi Huy ơi!");
+         }
+    }, 1000);
+    </script>
+</body>
+</html>

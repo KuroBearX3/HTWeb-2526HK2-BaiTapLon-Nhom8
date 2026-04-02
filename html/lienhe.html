@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/lienhe.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <main class="page-contact">
+    
+    <div class="container">
+        <div class="breadcrumb" style="margin-top: 20px; margin-bottom: 20px; font-size: 14px; color: #666;">
+            <strong>Trang chủ</strong> » Liên hệ
+        </div>
+
+        <div class="contact-info-blocks">
+            <div class="info-box">
+                <h4>ĐỊA CHỈ SHOWROOM</h4>
+                <p><em>Số 12 Nguyễn Văn Bảo, Phường 4,<br>Gò Vấp, TP.HCM</em></p>
+            </div>
+            <div class="info-box bg-pink">
+                <h4>GIỜ MỞ CỬA</h4>
+                <p><em>T2-T7: 8H30 – 18H</em></p>
+            </div>
+            <div class="info-box bg-pink">
+                <h4>LIÊN HỆ ZALO</h4>
+                <p>Hỗ trợ kĩ thuật: <span class="highlight">0352393016</span></p>
+                <p>CSKH: <span class="highlight">0352393016</span></p>
+            </div>
+            <div class="info-box">
+                <h4>SỐ ĐIỆN THOẠI</h4>
+                <p><strong>0352393016 – 0352393016</strong></p>
+            </div>
+        </div>
+
+        <div class="contact-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.85823703991!2d106.68427047468532!3d10.822158958349077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1711950000000!5m2!1svi!2s" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+<div class="form-section-bg">
+    <div class="container">
+        <div class="form-wrapper">
+            <form id="contactForm" class="contact-form" onsubmit="handleFormSubmit(event)">
+                
+                <div class="form-group">
+                    <input type="text" placeholder="HỌ TÊN *" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" placeholder="EMAIL" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="tel" placeholder="SỐ ĐIỆN THOẠI *" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" placeholder="TIÊU ĐỀ">
+                </div>
+
+                <div class="form-group">
+                    <textarea rows="4" placeholder="NỘI DUNG LIÊN HỆ" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Gửi ngay</button>
+
+                <div id="successMessage" style="display: none; margin-top: 20px; padding: 12px 15px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; border-radius: 4px; font-size: 14px; font-weight: bold; text-align: center;">
+                    Thông tin của bạn đã được ghi lại, chúng tôi sẽ liên hệ sớm nhất
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+function handleFormSubmit(event) {
+    event.preventDefault(); 
+
+    const successMsg = document.getElementById('successMessage');
+    
+    successMsg.style.display = 'block';
+    
+    document.getElementById('contactForm').reset();
+    
+    setTimeout(function() {
+        successMsg.style.display = 'none';
+    }, 5000);
+}
+</script>
+</main>
+    <div id="footer"></div>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => {
+                    if (!res.ok) throw new Error("Lỗi load: " + file);
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+</html>

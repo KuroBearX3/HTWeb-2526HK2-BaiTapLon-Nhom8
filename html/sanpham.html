@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Sản phẩm</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/sanpham.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <div class="breadcrumb" style="margin-top: 20px; margin-bottom: 20px; font-size: 14px; color: #666;">
+            <strong>Trang chủ</strong> » Sản phẩm
+        </div>
+        
+        <main style="min-height: 500px; padding: 20px;">
+            <section class="filter-bar">
+                <div class="filter-group">
+                    <label for="filter-type">Loại thiết bị:</label>
+                    <select id="filter-type">
+                        <option value="all">Tất cả</option>
+                        <option value="router">Router Wifi</option>
+                        <option value="switch">Bộ chia mạng (Switch)</option>
+                        <option value="repeater">Repeater</option>
+                        <option value="usb">USB Wifi</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-price">Khoảng giá:</label>
+                    <select id="filter-price">
+                        <option value="all">Tất cả giá</option>
+                        <option value="low">Dưới 1.000.000đ</option>
+                        <option value="mid">1.000.000đ - 5.000.000đ</option>
+                        <option value="high">Trên 5.000.000đ</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-brand">Thương hiệu:</label>
+                    <select id="filter-brand">
+                        <option value="all">Tất cả</option>
+                        <option value="tp-link">TP-Link</option>
+                        <option value="ubiquiti">Ubiquiti</option>
+                        <option value="xiaomi">Xiaomi</option>
+                        <option value="mercusys">Mercusys</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-sort">Sắp xếp:</label>
+                    <select id="filter-sort">
+                        <option value="default">Mặc định</option>
+                        <option value="price-asc">Giá thấp đến cao</option>
+                        <option value="price-desc">Giá cao đến thấp</option>
+                    </select>
+                </div>
+
+                <button class="btn-filter">Lọc kết quả</button>
+            </section>
+            
+            <main class="product-container">
+                <div class="product-grid" id="product-grid">
+                    <!-- Sản phẩm 1-->
+                    <div class="product-card" data-type="router" data-price="1690000" data-brand="tp-link">
+                        <div class="product-image">
+                            <img src="../img/router1.png" alt="Router Wifi">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Router Wifi Chuẩn Wifi 7 TP-Link Archer BE220</h3>
+                            <div class="product-price">1.690.000đ</div>
+                            <button class="btn-detail">Xem chi tiết</button>
+                        </div>
+                        <div class="hidden-details" style="display:none;">
+                            <p><strong>Loại thiết bị:</strong> Router Wifi</p>
+                            <p><strong>Hãng:</strong> TP-Link</p>
+                            <p><strong>Băng tần mạng:</strong> 2.4GHz & 5GHz</p>
+                            <p><strong>Tốc độ wifi:</strong> 688 Mbps (băng tần 2.4GHz) & 2882 Mbps (băng tần 5GHz)</p>
+                            <p><strong>Chuẩn mạng:</strong> BE3600</p>
+                            <p><strong>Kích thước:</strong> Dài 28.2 cm - Rộng 21.1 cm - Cao 9.3 cm - Nặng 760 g</p>
+                            <p><strong>Cổng:</strong> 1 WAN, 4 LAN</p>
+                        </div>
+                    </div>
+
+                    <!-- Sản phẩm 2-->
+                    <div class="product-card" data-type="router" data-price="6190000" data-brand="tp-link">
+                        <div class="product-image">
+                            <img src="../img/router3.png" alt="Router Wifi">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Router 5G AX1800 TP-Link Archer NX200</h3>
+                            <div class="product-price">6.190.000đ</div>
+                            <button class="btn-detail">Xem chi tiết</button>
+                        </div>
+                        <div class="hidden-details" style="display:none;">
+                            <p><strong>Loại thiết bị:</strong> Router Wifi</p>
+                            <p><strong>Hãng:</strong> TP-Link</p>
+                            <p><strong>Băng tần mạng:</strong> 2.4GHz & 5GHz</p>
+                            <p><strong>Tốc độ wifi:</strong> 574 Mbps (băng tần 2.4GHz) & 1201 Mbps (băng tần 5GHz)</p>
+                            <p><strong>Chuẩn mạng:</strong> AX1800</p>
+                            <p><strong>Kích thước:</strong> Dài 9.9 cm - Rộng 9.9 cm - Cao 19 cm - Nặng 1180 g</p>
+                            <p><strong>Cổng:</strong> 1 Cổng tích hợp LAN, WAN, 2 cổng SMA cho ăng-ten ngoài 5G/4G, 1 cổng nguồn, 2 LAN, 1 Nano SIM</p>
+                        </div>
+                    </div>
+
+                <!-- Sản phẩm 3-->
+                    <div class="product-card" data-type="router" data-price="790000" data-brand="xiaomi">
+                        <div class="product-image">
+                            <img src="../img/router2.png" alt="Router Wifi">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Router Wifi Chuẩn Wifi 6 Xiaomi AX1500</h3>
+                            <div class="product-price">790.000đ</div>
+                            <button class="btn-detail">Xem chi tiết</button>
+                        </div>
+                        <div class="hidden-details" style="display:none;">
+                            <p><strong>Loại thiết bị:</strong> Router Wifi</p>
+                            <p><strong>Hãng:</strong> Xiaomi</p>
+                            <p><strong>Băng tần mạng:</strong> 2.4GHz & 5GHz</p>
+                            <p><strong>Tốc độ wifi:</strong> 300 Mbps (băng tần 2.4GHz) & 1201 Mbps (băng tần 5GHz)</p>
+                            <p><strong>Chuẩn mạng:</strong> Chuẩn Wifi 6 Mới</p>
+                            <p><strong>Kích thước:</strong> Dài 20 cm - Rộng 12 cm - Cao 3.5 cm - Nặng 700 g</p>
+                            <p><strong>Cổng:</strong> 4 x LAN</p>
+                        </div>
+                    </div>
+
+                <!-- Sản phẩm 4-->
+                    <div class="product-card" data-type="switch" data-price="245000" data-brand="tp-link">
+                        <div class="product-image">
+                            <img src="../img/switch2.png" alt="Switch">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Thiết bị chuyển mạch Switch TP-Link 5 cổng LS1005G</h3>
+                            <div class="product-price">245.000đ</div>
+                            <button class="btn-detail">Xem chi tiết</button>
+                        </div>
+                        <div class="hidden-details" style="display:none;">
+                            <p><strong>Loại thiết bị:</strong> Bộ chia mạng (Switch)</p>
+                            <p><strong>Hãng:</strong> TP-Link</p>
+                            <p><strong>Kích thước:</strong> Dài 9 cm - Rộng 7.2 cm - Dày 2.3 cm - Nặng 196 g</p>
+                            <p><strong>Cổng:</strong> 5 LAN</p>
+                        </div>
+                    </div>
+
+                    <!-- Sản phẩm 5-->
+                    <div class="product-card" data-type="switch" data-price="395000" data-brand="tp-link">
+                        <div class="product-image">
+                            <img src="../img/switch1.png" alt="Switch">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Thiết bị chuyển mạch Switch TP-Link 8 cổng LS1008G</h3>
+                            <div class="product-price">395.000đ</div>
+                            <button class="btn-detail">Xem chi tiết</button>
+                        </div>
+                        <div class="hidden-details" style="display:none;">
+                            <p><strong>Loại thiết bị:</strong> Bộ chia mạng (Switch)</p>
+                            <p><strong>Hãng:</strong> TP-Link</p>
+                            <p><strong>Kích thước:</strong> Dài 12.7 cm - Rộng 6.65 cm - Dày 2.3 cm - Nặng 196 g</p>
+                            <p><strong>Cổng:</strong> 8 x LAN</p>
+                        </div>
+                    </div>
+
+                    <!-- Sản phẩm 6-->
+                    <div class="product-card" data-type="repeater" data-price="1690000" data-brand="xiaomi">
+                        <div class="product-image">
+                            <img src="../img/repeater1.png" alt="Repeater Wifi">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Repeater mở rộng sóng Wifi Xiaomi Wifi Range Extender N300</h3>
+                            <div class="product-price">250.000đ</div>
+                            <button class="btn-detail">Xem chi tiết</button>
+                        </div>
+                        <div class="hidden-details" style="display:none;">
+                            <p><strong>Loại thiết bị:</strong> Repeater (Bộ mở rộng sóng Wifi)</p>
+                            <p><strong>Hãng:</strong> Xiaomi</p>
+                            <p><strong>Băng tần mạng:</strong> 2.4GHz</p>
+                            <p><strong>Tốc độ wifi:</strong> 300 Mbps (băng tần 2.4GHz)</p>
+                            <p><strong>Chuẩn mạng:</strong> Chuẩn N</p>
+                            <p><strong>Mật độ phủ sóng (bán kính):</strong> 60 m</p>
+                            <p><strong>Kích thước:</strong> Dài 8.0 cm - Rộng 5.4 cm - Cao 7.0 cm - Nặng 157g</p>
+                        </div>
+                    </div>
+
+                    <!-- Sản phẩm 7-->
+                    <div class="product-card" data-type="repeater" data-price="550000" data-brand="mercusys">
+                        <div class="product-image">
+                            <img src="../img/repeater2.png" alt="Repeater Wifi">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Repeater mở rộng sóng Wifi 6 AX1500 Mercusys ME60X</h3>
+                            <div class="product-price">550.000đ</div>
+                            <button class="btn-detail">Xem chi tiết</button>
+                        </div>
+                        <div class="hidden-details" style="display:none;">
+                            <p><strong>Loại thiết bị:</strong> Repeater (Bộ mở rộng sóng Wifi)</p>
+                            <p><strong>Hãng:</strong> Mercusys</p>
+                            <p><strong>Băng tần mạng:</strong> 2.4GHz & 5GHz</p>
+                            <p><strong>Tốc độ wifi:</strong> 300 Mbps (băng tần 2.4GHz) & 1201 Mbps (băng tần 5GHz)</p>
+                            <p><strong>Chuẩn mạng:</strong> Chuẩn Wifi 6 Mới</p>
+                            <p><strong>Cổng:</strong> 1 cổng LAN (RJ45)</p>
+                            <p><strong>Mật độ phủ sóng (bán kính):</strong> 12 m</p>
+                            <p><strong>Kích thước:</strong> Ngang 7.3 cm - Rộng 8.2 cm - Cao 17.4 cm - Nặng 200 g</p>
+                        </div>
+                    </div>
+
+                    <!-- Sản phẩm 8-->
+                    <div class="product-card" data-type="usb" data-price="255000" data-brand="tp-link">
+                        <div class="product-image">
+                            <img src="../img/usb1.png" alt="USB Wifi">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">USB Wifi Chuẩn AC600 TP-Link Archer T2U Plus</h3>
+                            <div class="product-price">255.000đ</div>
+                            <button class="btn-detail">Xem chi tiết</button>
+                        </div>
+                        <div class="hidden-details" style="display:none;">
+                            <p><strong>Loại thiết bị:</strong> USB Wifi</p>
+                            <p><strong>Hãng:</strong> TP-Link</p>
+                            <p><strong>Băng tần mạng:</strong> 2.4GHz & 5GHz</p>
+                            <p><strong>Tốc độ wifi:</strong> 2200 Mbps (băng tần 2.4GHz) & 433 Mbps (băng tần 5GHz)</p>
+                            <p><strong>Chuẩn mạng:</strong> AC650</p>
+                            <p><strong>Tương thích:</strong> Windows XP, macOS (MacBook, iMac), Windows 7, Windows 8, Windows 10, Windows 8.1</p>
+                            <p><strong>Kích thước:</strong> Dài 5.78 cm - Rộng 1.8 cm - Dày 1.734 cm - Nặng 20g</p>
+                        </div>
+                    </div>
+
+                    <!-- Sản phẩm 9-->
+                    <div class="product-card" data-type="usb" data-price="285000" data-brand="mercusys">
+                        <div class="product-image">
+                            <img src="../img/usb2.png" alt="Router Wifi">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">USB Wifi Chuẩn AC1300 Mercusys MA32H</h3>
+                            <div class="product-price">285.000đ</div>
+                            <button class="btn-detail">Xem chi tiết</button>
+                        </div>
+                        <div class="hidden-details" style="display:none;">
+                            <p><strong>Loại thiết bị:</strong> USB Wifi</p>
+                            <p><strong>Hãng:</strong> Mercusys</p>
+                            <p><strong>Băng tần mạng:</strong> 2.4GHz & 5GHz</p>
+                            <p><strong>Tốc độ wifi:</strong> 400 Mbps (băng tần 2.4GHz) & 867 Mbps (băng tần 5GHz)</p>
+                            <p><strong>Chuẩn mạng:</strong> AC1300</p>
+                            <p><strong>Tương thích:</strong> Windows 10, Windows 11 </p>
+                            <p><strong>Kích thước:</strong> Dài 7.7 cm - Rộng 4.52 cm - Dày 1.24 cm</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <div id="productModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-btn">&times;</span>
+                    <div class="modal-body">
+                        <div class="modal-img">
+                            <img id="modal-img-src" src="" alt="">
+                        </div>
+                        <div class="modal-info">
+                            <h2 id="modal-title"></h2>
+                            <div id="modal-price" class="product-price"></div>
+                            <div id="modal-desc"></div>
+                            <button class="btn-buy">Thêm vào giỏ hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </main>
+    </div>
+    <div id="footer"></div>
+<script>
+    function loadComponent(id, file) {
+        fetch(file)
+            .then(res => {
+                if (!res.ok) throw new Error("Lỗi load: " + file);
+                return res.text();
+            })
+            .then(data => {
+                document.getElementById(id).innerHTML = data;
+                updateCartBadge();
+            })
+            .catch(err => console.error(err));
+    }
+    loadComponent("header", "header.html");
+    loadComponent("footer", "footer.html");
+
+    document.querySelector('.btn-filter').addEventListener('click', function() {
+        const grid = document.getElementById('product-grid');
+        const products = Array.from(grid.querySelectorAll('.product-card'));
+        
+        const typeValue = document.getElementById('filter-type').value;
+        const priceValue = document.getElementById('filter-price').value;
+        const brandValue = document.getElementById('filter-brand').value;
+        const sortValue = document.getElementById('filter-sort').value;
+
+        // BƯỚC A: LỌC
+        products.forEach(product => {
+            const pType = product.getAttribute('data-type');
+            const pPrice = parseInt(product.getAttribute('data-price'));
+            const pBrand = product.getAttribute('data-brand');
+
+            const matchType = (typeValue === 'all' || pType === typeValue);
+            const matchBrand = (brandValue === 'all' || pBrand === brandValue);
+            
+            let matchPrice = false;
+            if (priceValue === 'all') matchPrice = true;
+            else if (priceValue === 'low') matchPrice = (pPrice < 1000000);
+            else if (priceValue === 'mid') matchPrice = (pPrice >= 1000000 && pPrice <= 5000000);
+            else if (priceValue === 'high') matchPrice = (pPrice > 5000000);
+
+            product.style.display = (matchType && matchPrice && matchBrand) ? "flex" : "none";
+        });
+
+        if (sortValue !== 'default') {
+            products.sort((a, b) => {
+                const priceA = parseInt(a.getAttribute('data-price'));
+                const priceB = parseInt(b.getAttribute('data-price'));
+                return (sortValue === 'price-asc') ? (priceA - priceB) : (priceB - priceA);
+            });
+            grid.innerHTML = "";
+            products.forEach(p => grid.appendChild(p));
+        }
+    });
+
+    // 3. Xử lý Modal (Dùng Event Delegation để không bị mất sự kiện khi lọc)
+    const modal = document.getElementById("productModal");
+    const closeBtn = document.querySelector(".close-btn");
+
+    document.getElementById('product-grid').addEventListener('click', function(e) {
+        if (e.target && e.target.classList.contains('btn-detail')) {
+            const card = e.target.closest('.product-card');
+            
+            document.getElementById('modal-title').innerText = card.querySelector('.product-name').innerText;
+            document.getElementById('modal-price').innerText = card.querySelector('.product-price').innerText;
+            document.getElementById('modal-img-src').src = card.querySelector('img').src;
+            document.getElementById('modal-desc').innerHTML = card.querySelector('.hidden-details').innerHTML;
+
+            modal.style.display = "block";
+        }
+    });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; }
+
+    // 4. Xử lý Thêm vào giỏ hàng
+    document.addEventListener('click', function (e) {
+        if (e.target && e.target.classList.contains('btn-buy')) {
+            const productName = document.getElementById('modal-title').innerText;
+            const productPriceText = document.getElementById('modal-price').innerText;
+            const productImg = document.getElementById('modal-img-src').src;
+            const productPriceNum = parseInt(productPriceText.replace(/\./g, '').replace('đ', ''));
+
+            let cart = JSON.parse(localStorage.getItem('netstore_cart')) || [];
+            const findIndex = cart.findIndex(item => item.name === productName);
+
+            if (findIndex > -1) {
+                cart[findIndex].quantity += 1;
+            } else {
+                cart.push({
+                    name: productName,
+                    priceText: productPriceText,
+                    price: productPriceNum,
+                    img: productImg,
+                    quantity: 1
+                });
+            }
+
+            localStorage.setItem('netstore_cart', JSON.stringify(cart));
+            alert(`Đã thêm ${productName} vào giỏ hàng!`);
+            modal.style.display = "none";
+            updateCartBadge();
+        }
+    });
+
+    function updateCartBadge() {
+        const cart = JSON.parse(localStorage.getItem('netstore_cart')) || [];
+        const badge = document.querySelector('.cart-count-badge'); 
+        if (badge) {
+            const totalQty = cart.reduce((sum, item) => sum + item.quantity, 0);
+            badge.innerText = totalQty;
+        }
+    }
+
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+.contact-info-blocks {
+    display: flex;
+    border: 2px solid #0d3b66; 
+}
+
+.info-box {
+    flex: 1;
+    padding: 30px 20px;
+    text-align: center;
+    border-right: 1px solid #0d3b66;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-box:last-child {
+    border-right: none;
+}
+
+.info-box.bg-pink {
+    background-color: #ffeaea; 
+}
+
+.info-box h4 {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.info-box .highlight {
+    color: #1d7cf2; 
+    font-weight: bold;
+}
+
+
+.contact-map {
+    margin-bottom: 40px;
+}
+.contact-map iframe {
+    display: block; 
+}
+
+.form-section-bg {
+    background-color: #f5f5f5; 
+    padding: 50px 0;
+}
+
+.form-wrapper {
+    background-color: transparent;
+    max-width: 800px; 
+    margin: 0 auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #333;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    outline: none;
+    transition: border-color 0.3s;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #666;
+    font-weight: bold;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-bottom-color: #1d7cf2;
+}
+
+
+.form-group.has-error input {
+    border-bottom-color: #d93025; 
+}
+
+.form-group.has-error .error-msg {
+    display: block;
+    color: #d93025;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+.error-msg {
+    display: none; 
+}
+
+
+.btn-submit {
+    background-color: #0b4cc4; 
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start; 
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #083a99;
+}
+
+
+.global-error {
+    margin-top: 20px;
+    padding: 12px 15px;
+    border: 1px solid #f4c724; 
+    background-color: transparent;
+    color: #333;
+    font-size: 14px;
+}

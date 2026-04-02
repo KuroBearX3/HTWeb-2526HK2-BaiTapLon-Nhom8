@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/trangchu.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="container">
+        <main class="homepage">
+            <section class="hero-banner">
+                <a href="sanpham.html">
+                    <img src="../img/banner1.png">
+                </a>
+            </section>
+
+            <section class="featured-products container">
+                <div class="section-header">
+                    <h2>🔥 SẢN PHẨM NỔI BẬT</h2>
+                    <a href="sanpham.html" class="view-more-link">Xem tất cả →</a>
+                </div>
+
+                <div class="product-grid" id="product-grid">
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../img/router1.png" alt="Router">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Router Wifi Chuẩn Wifi 7 TP-Link Archer BE220</h3>
+                            <div class="price-box">
+                                <span class="product-price">1.690.000đ</span>
+                            </div>
+                            <a href="sanpham.html">
+                                <button class="btn-add-cart">Xem chi tiết tại sản phẩm</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../img/switch1.png" alt="Switch">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Thiết bị chuyển mạch Switch TP-Link 8 cổng LS1008G</h3>
+                            <div class="price-box">
+                                <span class="product-price">395.000đ</span>
+                            </div>
+                            <a href="sanpham.html">
+                                <button class="btn-add-cart">Xem chi tiết tại sản phẩm</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../img/repeater1.png" alt="Repeater">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Repeater mở rộng sóng Wifi Xiaomi Wifi Range Extender N300</h3>
+                            <div class="price-box">
+                                <span class="product-price">250.000đ</span>
+                            </div>
+                            <a href="sanpham.html">
+                                <button class="btn-add-cart">Xem chi tiết tại sản phẩm</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="../img/usb1.png" alt="USB Wifi">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">USB Wifi Chuẩn AC600 TP-Link Archer T2U Plus</h3>
+                            <div class="price-box">
+                                <span class="product-price">255.000đ</span>
+                            </div>
+                            <a href="sanpham.html">
+                                <button class="btn-add-cart">Xem chi tiết tại sản phẩm</button>
+                            </a>
+                        </div>
+                    </div>
+
+                    </div>
+            </section>
+        </main>
+    </div>
+    <div id="footer"></div>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => {
+                    if (!res.ok) throw new Error("Lỗi load: " + file);
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+</html>

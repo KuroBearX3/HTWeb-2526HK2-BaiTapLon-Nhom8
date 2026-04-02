@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/baiviet.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+<main class="post-detail-page">
+    
+    <header class="post-header">
+        <h1>HUB Tapo H500: Trung Tâm Điều Khiển Nhà Thông Minh</h1>
+        <div class="post-meta">
+            <span>bởi: NetStore</span> | <span>26 Tháng 02, 2026</span> | <span>0 Bình luận</span>
+        </div>
+    </header>
+
+    <article class="post-content">
+        <p>HUB Tapo H500 là trung tâm điều khiển giúp quản lý camera và thiết bị nhà thông minh trên cùng một hệ thống thống nhất. Thiết bị nổi bật với khả năng lưu trữ cục bộ lớn, AI nhận diện thông minh và bảo mật nhiều lớp, mang lại sự an toàn và tiết kiệm chi phí dài lâu.</p>
+
+        <img src="../img/anhbaiviet2.jpg">
+
+        <h2>1. Lưu trữ cục bộ lớn, mở rộng tối đa 16TB</h2>
+        <p>Được trang bị sẵn bộ nhớ 16GB eMMC giúp lưu trữ dữ liệu trực tiếp mà không cần phụ thuộc vào cloud. Ngoài ra, bạn có thể cắm thêm ổ cứng HDD/SSD lên tới 16TB để lưu trữ video giám sát liên tục trong thời gian dài.</p>
+
+        <h2>2. AI nhận diện khuôn mặt chính xác đến 99%</h2>
+        <p>Công nghệ AI tiên tiến giúp phân biệt người thân, khách quen và người lạ cực kỳ chuẩn xác. Hệ thống còn tự động theo dõi chuyển động của một người qua nhiều camera khác nhau để tạo thành một hành trình liền mạch.</p>
+
+        <img src="./assets/images/hub-tapo-h500-ket-noi-he-sinh-thai" alt="Kết nối camera và cảm biến Tapo">
+
+        <h2>3. Quản lý đồng thời 16 camera và 64 cảm biến</h2>
+        <p>Đóng vai trò là "bộ não" trung tâm, Tapo H500 kết nối đồng bộ tối đa 16 camera và 64 cảm biến (chuyển động, cửa, khói...) vào chung một giao diện ứng dụng, giúp bạn dễ dàng tạo các kịch bản báo động thông minh.</p>
+
+        <h2>4. Bảo mật dữ liệu chuẩn quốc tế</h2>
+        <p>Sử dụng mã hóa AES 128-bit và giao thức TLS 1.2, kết hợp với việc xử lý AI trực tiếp trên thiết bị (thay vì đẩy lên đám mây), đảm bảo quyền riêng tư và dữ liệu cá nhân của bạn được bảo vệ tuyệt đối.</p>
+
+        <h2>5. Ứng dụng Tapo tiện lợi & Xuất hình qua HDMI</h2>
+        <p>Kiểm soát mọi thứ từ xa qua app Tapo trên điện thoại. Đặc biệt, bạn có thể cắm trực tiếp cáp HDMI từ HUB ra màn hình TV hoặc máy tính để giám sát trực tiếp nhiều camera cùng lúc (rất hữu ích cho cửa hàng, văn phòng).</p>
+
+        <h2>6. Còi báo động 110dB & Đàm thoại 2 chiều</h2>
+        <p>Thiết bị tích hợp còi hú âm lượng khủng lên đến 110dB để đuổi trộm ngay khi phát hiện xâm nhập. Kèm theo đó là hệ thống micro và loa để bạn giao tiếp trực tiếp với khách trước cửa hoặc cảnh báo người lạ từ xa.</p>
+
+        <p><strong>Kết luận:</strong> Nếu bạn đang xây dựng hệ sinh thái smarthome, chiếc HUB H500 này là một mảnh ghép hoàn hảo để mọi thiết bị kết nối trơn tru, lưu trữ an toàn và quản lý dễ dàng hơn bao giờ hết.</p>
+    </article>
+</main>
+    <div id="footer"></div>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => {
+                    if (!res.ok) throw new Error("Lỗi load: " + file);
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+</html>

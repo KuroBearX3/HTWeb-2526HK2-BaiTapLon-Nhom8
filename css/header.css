@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+/* Top bar */
+.top-bar {
+    background: #0d3b66;
+    color: white;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-bar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+/* Main header */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0d3b66;
+}
+
+.logo-icon {
+    margin-right: 5px;
+}
+
+/* Search */
+.search-box {
+    display: flex;
+    width: 40%;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    background: #1d7cf2;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Actions */
+.actions a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Menu */
+.menu {
+    background: #1d7cf2;
+}
+
+.menu .container {
+    display: flex;
+}
+
+.menu a {
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background: #155bb5;
+}
+
+#global-search-btn:active {
+    background: #155bb5;
+}

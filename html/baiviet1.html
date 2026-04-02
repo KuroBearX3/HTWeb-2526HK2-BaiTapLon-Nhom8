@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/baiviet.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+<main class="post-detail-page">
+    <div class="breadcrumb">Trang chủ » Tin tức » Hướng dẫn sử dụng camera Mercusys chi tiết, đơn giản</div>
+    
+    <header class="post-header">
+        <h1>Hướng dẫn sử dụng camera Mercusys chi tiết, đơn giản</h1>
+        <div class="post-meta">Bởi: NetStore | 03 Tháng 04, 2026 | Danh mục: Camera</div>
+    </header>
+
+    <article class="post-content">
+        <p>Chào mọi người! Hôm nay NetStore sẽ hướng dẫn các bạn cách thiết lập và sử dụng chiếc camera Mercusys từ A đến Z nhé. Nhiều bạn mới mua về hay lúng túng ở bước kết nối, nhưng thực ra nó cực kỳ dễ luôn, chỉ tốn vài phút là xong.</p>
+        <img src="../img/anhbaiviet1.jpg">
+        
+        <h2>Bước 1: Tải app và cắm điện</h2>
+        <p>Đầu tiên, bạn cứ cắm điện cho camera khởi động cái đã. Đợi đèn LED chớp nháy là nó đã sẵn sàng. Sau đó, bạn lấy điện thoại ra, vào App Store hoặc CH Play tải ngay ứng dụng <strong>Mercusys</strong> về máy. Tạo một tài khoản bằng email của bạn rồi đăng nhập vào.</p>
+
+        <h2>Bước 2: Kết nối camera với Wi-Fi nhà bạn</h2>
+        <p>Trong app, bạn bấm vào dấu "+" ở góc phải màn hình để thêm thiết bị. App sẽ hướng dẫn bạn từng bước: quét mã QR dưới đáy camera, sau đó nhập mật khẩu Wi-Fi nhà bạn vào. Bạn nhớ chọn mạng Wi-Fi 2.4GHz nhé, đa số camera hiện nay chưa hỗ trợ băng tần 5GHz đâu.</p>
+        <h2>Bước 3: Tận hưởng các tính năng thông minh</h2>
+        <p>Kết nối xong là màn hình sẽ hiện luôn video trực tiếp. Trong app này có mấy nút rất hay mà bạn nên thử nghiệm liền:</p>
+        <ul>
+            <li><strong>Đàm thoại 2 chiều:</strong> Nhấn giữ biểu tượng micro để nói chuyện với người ở nhà, âm thanh to rõ phết.</li>
+            <li><strong>Xoay 360 độ:</strong> Vuốt màn hình để chỉnh góc cam, nhìn quanh nhà không góc chết.</li>
+            <li><strong>Bật thông báo chuyển động:</strong> Cam phát hiện ai đi ngang qua là báo ngay về điện thoại cho bạn.</li>
+        </ul>
+        <p>Thế là xong rồi đấy, đơn giản đúng không? Chúc các bạn cài đặt thành công nhé!</p>
+    </article>
+</main>
+    <div id="footer"></div>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => {
+                    if (!res.ok) throw new Error("Lỗi load: " + file);
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+</html>

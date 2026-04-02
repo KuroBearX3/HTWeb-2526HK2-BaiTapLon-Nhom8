@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/thanhtoan.css">
+    <link rel="stylesheet" href="../css/giohang.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <main style="min-height: 500px; padding: 20px;">
+        <main class="checkout-container container">
+        <nav class="cart-stepper mb-5">
+                <div class="step"><span>1</span><p>Giỏ hàng</p></div>
+                <div class="line"></div>
+                <div class="step active"><span>2</span><p>Xác nhận</p></div>
+            </nav>
+        
+            <div class="checkout-layout">
+                <section class="checkout-form">
+                    <h2>Thông tin giao hàng</h2>
+                    <form id="order-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Họ và tên" required id="fullname">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email" required id="email">
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Số điện thoại" required id="phone">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Địa chỉ nhận hàng" required id="address">
+                        </div>
+                        <h3>Phương thức thanh toán</h3>
+                        <div class="payment-methods">
+                            <label>
+                                <input type="radio" name="payment" value="cod" checked> 
+                                Thanh toán khi nhận hàng (COD)
+                            </label> <br>
+                            <label>
+                                <input type="radio" name="payment" value="bank"> 
+                                Chuyển khoản ngân hàng
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-confirm">XÁC NHẬN ĐẶT HÀNG</button>
+                    </form>
+                </section>
+
+                <aside class="order-summary">
+                    <h2>Đơn hàng của bạn</h2>
+                    <div id="checkout-items">
+                        </div>
+                    <hr>
+                    <div class="summary-line">
+                        <span>Tạm tính:</span>
+                        <span id="subtotal">0đ</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Phí vận chuyển:</span>
+                        <span>Miễn phí</span>
+                    </div>
+                    <div class="summary-line total">
+                        <span>Tổng cộng:</span>
+                        <span id="final-total">0đ</span>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </main>
+    <div id="footer"></div>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => {
+                    if (!res.ok) throw new Error("Lỗi load: " + file);
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+
+        // --- LOGIC HIỂN THỊ ĐƠN HÀNG ---
+    document.addEventListener('DOMContentLoaded', () => {
+        const checkoutItems = document.getElementById('checkout-items');
+        const subtotalEl = document.getElementById('subtotal');
+        const finalTotalEl = document.getElementById('final-total');
+
+        // Lấy dữ liệu từ giỏ hàng
+        let cart = JSON.parse(localStorage.getItem('netstore_cart')) || [];
+
+        if (cart.length === 0) {
+            checkoutItems.innerHTML = "<p class='text-center'>Giỏ hàng trống!</p>";
+            return;
+        }
+
+        let total = 0;
+        let html = "";
+
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            html += `
+                <div class="summary-item d-flex justify-content-between mb-2">
+                    <span style="font-size: 14px;">${item.name} <strong>x${item.quantity}</strong></span>
+                    <span style="font-size: 14px;">${itemTotal.toLocaleString('vi-VN')}đ</span>
+                </div>
+            `;
+        });
+
+        checkoutItems.innerHTML = html;
+        subtotalEl.innerText = total.toLocaleString('vi-VN') + "đ";
+        finalTotalEl.innerText = total.toLocaleString('vi-VN') + "đ";
+    });
+
+    document.getElementById('order-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('fullname').value;
+        const phone = document.getElementById('phone').value;
+
+        alert(`Chúc mừng ${name}! Đơn hàng của bạn đã được đặt thành công. Chúng tôi sẽ liên hệ qua số ${phone} sớm nhất.`);
+
+        localStorage.removeItem('netstore_cart');
+
+        window.location.href = "trangchu.html"; 
+    });
+    </script>
+</body>
+</html>

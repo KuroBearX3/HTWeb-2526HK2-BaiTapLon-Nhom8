@@ -1,0 +1,93 @@
+
+:root {
+    --primary: #007bff;
+    --primary-dark: #0056b3;
+    --bg-light: #f8f9fa;
+    --text-main: #2d3436;
+    --radius: 16px;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+}
+
+.cart-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.cart-stepper .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #b2bec3;
+}
+.cart-stepper .step span {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #dfe6e9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.cart-stepper .line {
+    height: 2px;
+    width: 50px;
+    background: #dfe6e9;
+    margin-bottom: 25px;
+}
+.cart-stepper .step.active { color: var(--primary); }
+.cart-stepper .step.active span {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+}
+
+
+.cart-item-card {
+    transition: all 0.3s ease;
+}
+.cart-item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+}
+
+.qty-control {
+    background: #f1f2f6;
+    max-width: 120px;
+}
+.qty-control .btn:hover {
+    color: var(--primary);
+}
+
+/* CHECKOUT SIDEBAR */
+.checkout-sidebar .card {
+    border-radius: var(--radius);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.checkout-sidebar .btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.checkout-sidebar .btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+
+@media (max-width: 768px) {
+    .cart-stepper p { display: none; }
+    .cart-stepper .line { width: 30px; }
+    .cart-item-card { text-align: center; }
+    .cart-item-card .text-end { text-align: center !important; }
+    .qty-control { margin: 10px auto; }
+}

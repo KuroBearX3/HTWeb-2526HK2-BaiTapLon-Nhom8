@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/baiviet.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+<main class="post-detail-page">
+    
+    <header class="post-header">
+        <h1>Lỗi camera Tapo không có bản ghi: Nguyên nhân và cách khắc phục</h1>
+        <div class="post-meta">
+            <span>bởi: NetStore</span> | <span>10 Tháng 02, 2026</span> | <span>0 Bình luận</span>
+        </div>
+    </header>
+
+    <article class="post-content">
+        <p>Cảm giác đang cần trích xuất camera gấp xem ai vừa đi ngang qua cổng nhà mà mở app lên lại thấy báo "Không có bản ghi" thật sự rất ức chế đúng không mọi người? Nếu bạn đang xài cam Tapo và gặp tình trạng này thì cứ bình tĩnh nhé, NetStore sẽ chỉ bạn cách bắt đúng bệnh và tự xử lý ngay tại nhà.</p>
+
+        <img src="../img/anhbaiviet3.jpg" alt="Lỗi camera Tapo không lưu video">
+
+        <h2>1. Thủ phạm số 1: Thẻ nhớ MicroSD có vấn đề</h2>
+        <p>Phần lớn nguyên nhân đều nằm ở cái thẻ nhớ. Có thể do bạn xài thẻ kém chất lượng, thẻ bị đầy mà không tự ghi đè, hoặc lâu ngày bị lỏng chân tiếp xúc.</p>
+        <ul>
+            <li><strong>Cách xử lý:</strong> Bạn rút điện camera, tháo thẻ nhớ ra lau sạch chân đồng rồi cắm lại cho thật chặt. Sau đó mở app Tapo, vào phần <em>Cài đặt camera -> Thẻ nhớ MicroSD</em> và chọn <strong>Định dạng (Format)</strong> lại thẻ. Nếu format xong mà vẫn báo lỗi hoặc không lưu được, khả năng cao là thẻ đã hỏng, bạn cần mua thẻ nhớ mới chuyên dụng cho camera nhé.</li>
+        </ul>
+
+        <h2>2. Thủ phạm số 2: Thiết lập ghi hình bị sai</h2>
+        <p>Đôi khi do vô tình nghịch app hoặc nhà có ai đó bấm nhầm, tính năng tự động ghi hình đã bị tắt đi mất.</p>
+        <ul>
+            <li><strong>Cách xử lý:</strong> Bạn vào cài đặt của camera trên app, tìm mục <strong>Lịch trình ghi hình (Recording Schedule)</strong>. Hãy kiểm tra xem bạn đang chọn chế độ "Ghi hình liên tục" (màu xanh dương) hay "Ghi hình khi phát hiện chuyển động" (màu cam). Nhớ lấy tay tô màu phủ kín các ô thời gian trong tuần để cam biết lúc nào cần lưu video nhé.</li>
+        </ul>
+        <h2>3. Thủ phạm số 3: Lỗi kết nối mạng hoặc Firmware cũ</h2>
+        <p>Nếu bạn xài gói lưu trữ đám mây (Tapo Care) chứ không dùng thẻ nhớ mà mất bản ghi, thì 100% là do lúc đó mạng Wi-Fi nhà bạn bị rớt, camera không đẩy video lên mạng được. Ngoài ra, phần mềm cũ quá cũng hay sinh ra lỗi vặt.</p>
+        <ul>
+            <li><strong>Cách xử lý:</strong> Kiểm tra lại cục phát Wi-Fi xem mạng có ổn định không, rút điện cục Wi-Fi và camera cắm lại. Đồng thời, bạn vào App Store hoặc CH Play để cập nhật ứng dụng Tapo lên bản mới nhất. Trong app Tapo, nhớ kiểm tra và cập nhật <strong>Firmware</strong> cho camera luôn nhé.</li>
+        </ul>
+
+        <p><strong>Kết luận:</strong> Thường thì quanh đi quẩn lại chỉ do thẻ nhớ hoặc cài đặt sai thôi. Các bạn cứ check thử 3 bước trên là 99% camera Tapo sẽ ghi hình ngon lành lại ngay. Chúc các bạn thao tác thành công!</p>
+    </article>
+</main>
+    <div id="footer"></div>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => {
+                    if (!res.ok) throw new Error("Lỗi load: " + file);
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/gioithieu.css">
+    <script src="../js/search.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    <main class="container page-about-modern">
+    
+    <div class="breadcrumb">
+        <strong>Trang chủ</strong> » Giới thiệu công ty
+    </div>
+
+    <section class="about-intro">
+        <div class="intro-text">
+            <h1 class="page-title">Về NetStore</h1>
+            <p><strong>NetStore</strong> được thành lập với đội ngũ chuyên gia giàu kinh nghiệm trong lĩnh vực công nghệ thông tin. Chúng tôi tự hào là đơn vị phân phối chính hãng hàng đầu các thiết bị mạng, máy chủ, lưu trữ và giải pháp an ninh mạng tại Việt Nam.</p>
+            <p>Hòa cùng làn sóng công nghiệp 4.0, NetStore không ngừng mở rộng hệ sinh thái sản phẩm để mang đến những giải pháp hạ tầng CNTT toàn diện, thông minh và tối ưu chi phí nhất cho cả doanh nghiệp lẫn người dùng cá nhân.</p>
+        </div>
+        <div class="intro-image">
+            <img src="../img/gioithieu.jpg">
+        </div>
+    </section>
+
+    <section class="vision-mission">
+        <div class="vm-box">
+            <div class="vm-icon">🚀</div>
+            <h3>Tầm Nhìn</h3>
+            <p>Tiên phong trong hành trình chuyển đổi số, trở thành cầu nối vững chắc đưa các công nghệ mạng hiện đại, tiên tiến nhất trên thế giới đến với khách hàng tại Việt Nam.</p>
+        </div>
+        <div class="vm-box">
+            <div class="vm-icon">🌟</div>
+            <h3>Sứ Mệnh</h3>
+            <p>Cung cấp các giải pháp mạng chất lượng cao với chi phí tối ưu. Đồng thời xây dựng nền tảng vững chắc để cùng đối tác nâng tầm giá trị công nghệ Việt Nam trên bản đồ toàn cầu.</p>
+        </div>
+    </section>
+
+    <section class="core-values">
+        <h2 class="section-title center">Giá Trị Cốt Lõi</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <h4>Chính hãng - Minh bạch</h4>
+                <p>Cam kết 100% sản phẩm có nguồn gốc rõ ràng, minh bạch về xuất xứ và chính sách bảo hành.</p>
+            </div>
+            <div class="value-item">
+                <h4>Tận tâm - Đồng hành</h4>
+                <p>Lợi ích của khách hàng là trung tâm. Sát cánh từ khâu tư vấn, triển khai đến bảo hành hậu mãi.</p>
+            </div>
+            <div class="value-item">
+                <h4>Chuyên nghiệp - Hiệu quả</h4>
+                <p>Đội ngũ kỹ thuật chuyên môn cao, xử lý vấn đề và cung cấp dịch vụ nhanh chóng, chính xác.</p>
+            </div>
+            <div class="value-item">
+                <h4>Sáng tạo - Linh hoạt</h4>
+                <p>Luôn cập nhật xu hướng công nghệ mới để mang lại giải pháp tối ưu cho từng nhu cầu cụ thể.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="why-image">
+            <img src="../img/gioithieu2.jpg">
+        </div>
+        <div class="why-content">
+            <h2 class="section-title">Tại Sao Chọn NetStore?</h2>
+            <p>Giữa rất nhiều sự lựa chọn, NetStore luôn là đối tác tin cậy của hàng ngàn doanh nghiệp lớn nhỏ nhờ những khác biệt vượt trội:</p>
+            <ul class="why-list">
+                <li><strong>Sản phẩm chính hãng 100%:</strong> Phân phối trực tiếp từ Cisco, HPE, Dell, Aruba, Juniper...</li>
+                <li><strong>Giá cả cạnh tranh:</strong> Mức giá tốt nhất thị trường cùng nhiều chính sách chiết khấu cho đối tác.</li>
+                <li><strong>Tư vấn giải pháp chuyên sâu:</strong> Không chỉ bán hàng, chúng tôi thiết kế và tối ưu hệ thống mạng cho bạn.</li>
+                <li><strong>Hỗ trợ kỹ thuật 24/7:</strong> Đội ngũ kỹ sư sẵn sàng xử lý sự cố, đảm bảo hệ thống vận hành liên tục.</li>
+                <li><strong>Dịch vụ hậu mãi chu đáo:</strong> Bảo hành nhanh chóng, hỗ trợ bảo trì và nâng cấp trọn đời.</li>
+            </ul>
+        </div>
+    </section>
+
+</main>
+    <div id="footer"></div>
+    <script>
+        function loadComponent(id, file) {
+            fetch(file)
+                .then(res => {
+                    if (!res.ok) throw new Error("Lỗi load: " + file);
+                    return res.text();
+                })
+                .then(data => {
+                    document.getElementById(id).innerHTML = data;
+                })
+                .catch(err => console.error(err));
+        }
+        loadComponent("header", "header.html");
+        loadComponent("footer", "footer.html");
+    </script>
+</body>
+</html>
