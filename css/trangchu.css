@@ -102,6 +102,12 @@
     justify-content: center;
 }
 
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-blue);
+}
+
 .product-image img {
     max-width: 100%;
     max-height: 100%;
